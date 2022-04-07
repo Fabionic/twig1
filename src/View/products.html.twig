@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bonjour</title>
+    <link rel="icon" href="/assets/images/favicon.png">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+    <h1>{% for category, product in products|slice(0,2) %}
+   The product {{ product.name }} in category {{ category }}.
+{% endfor %}
+</h1>
+  {{ dump(products) }}  
+
+  <h1>{% for category, product in products|slice(4,5) %}
+   The product {{ product.name }} in category {{ category }}.
+{% endfor %}
+</h1>
+  {{ dump(products) }}  
+</body>
+</html>
+
